@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThriftVault, Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #3C2F2F;
+      background: #F8F1E9;
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+    .meta {
+      font-size: 14px;
+      color: #706060;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 36px 0 8px;
+    }
+    p, li { color: #3C2F2F; margin: 0 0 12px; }
+    ul { padding-left: 20px; margin: 0 0 12px; }
+    a { color: #3F7B77; }
+    hr { border: none; border-top: 1px solid #E8E2DC; margin: 40px 0; }
+    footer {
+      border-top: 1px solid #E8E2DC;
+      padding: 32px 0 40px;
+      margin-top: 48px;
+    }
+    .footer-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-imprint {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #706060;
+      font-weight: 600;
+    }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+    }
+    .footer-links a {
+      position: relative;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #706060;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 4px 0;
+      transition: color 160ms ease;
+    }
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 1px;
+      background: #B5934F;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 220ms cubic-bezier(0.2, 0.8, 0.3, 1.0);
+    }
+    .footer-links a:hover { color: #3C2F2F; }
+    .footer-links a:hover::after { transform: scaleX(1); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="meta">ThriftVault LLC &middot; Last updated: May 2026</p>
+
+    <p>
+      ThriftVault is a personal flip tracker for thrift resellers, operated by ThriftVault LLC.
+      This policy explains how your data is handled when you use the app.
+    </p>
+
+    <h2>1. Data We Collect</h2>
+    <p>ThriftVault does not collect, transmit, or store any personal data on external servers.</p>
+    <p>All data you enter, item names, prices, photos, notes, and settings, is stored
+    <strong>only on your device</strong> using local storage (AsyncStorage). Nothing leaves your device.</p>
+
+    <h2>2. Photos and Camera</h2>
+    <p>
+      ThriftVault may request access to your camera and photo library so you can attach photos to
+      the items in your vault. Photos you add are saved locally on your device. The only exception
+      is the AI scan feature, which sends a photo to one of our third-party AI providers (Google
+      Gemini or, as a fallback, Anthropic Claude) for analysis (see Section 4). Photos are never
+      stored on external servers or shared for any other purpose.
+    </p>
+
+    <h2>3. Crash Reporting</h2>
+    <p>
+      ThriftVault uses Sentry for crash and error reporting. If the app crashes or encounters
+      an error, a diagnostic report is automatically sent to Sentry's servers. This report may
+      include device type, OS version, app version, and a stack trace. No personal data,
+      vault contents, photos, or item details are included. Sentry is used solely to improve
+      app stability. See <a href="https://sentry.io/privacy/">Sentry's Privacy Policy</a> for details.
+    </p>
+    <p>
+      ThriftVault does not use advertising networks, behavioral analytics, or user-tracking
+      technologies. We do not know who you are or what items you track.
+    </p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>
+      ThriftVault uses Google's Gemini API as the primary AI scan provider and Anthropic's Claude
+      API as a fallback when Gemini is unavailable or overloaded. When you scan an item, the photo
+      is sent to whichever provider is currently serving the request, Google's servers in most
+      cases and Anthropic's servers when the fallback is triggered. Each provider may retain and
+      process the photo in accordance with their respective API terms, which may include using it
+      to improve their services. ThriftVault does not store your photos on any external server.
+      No other data (vault items, prices, notes, personal info) is ever transmitted to either
+      provider. See
+      <a href="https://ai.google.dev/gemini-api/terms">Google's Gemini API Terms</a> and
+      <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy Policy</a>
+      for details on how each provider handles data sent to their API.
+    </p>
+    <p>
+      ThriftVault uses RevenueCat to manage subscriptions and in-app purchases. When you
+      subscribe, purchase data (such as your subscription status and transaction identifiers)
+      is processed by Apple and RevenueCat. RevenueCat may collect anonymous device identifiers
+      to manage your entitlements. No personal information such as your name or email is shared
+      with RevenueCat. See
+      <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a> for details.
+    </p>
+    <p>
+      There is no backend and no account system. Network requests made by the app are limited to:
+      the Gemini and Claude APIs (AI scans), RevenueCat (subscription management), and Sentry
+      (crash reports).
+    </p>
+
+    <h2>5. Data Backup and Loss</h2>
+    <p>
+      Because all data lives on your device, it will be lost if you delete the app or switch
+      devices without a manual backup. ThriftVault has no way to restore lost data.
+      iCloud backup may preserve your data if you have iCloud backup enabled for your device,
+      but this is controlled entirely by Apple and your device settings, not by ThriftVault.
+    </p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+      ThriftVault is not directed at children under 13. We do not collect any
+      information from children.
+    </p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>
+      If this policy changes, we will update the "Last updated" date above and publish the
+      revised policy at the same URL. Continued use of the app after a policy change
+      constitutes acceptance of the updated terms.
+    </p>
+
+    <h2>8. Governing Law</h2>
+    <p>
+      This policy is governed by the laws of the State of Tennessee.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+      Questions about this policy? Email ThriftVault LLC at
+      <a href="mailto:contact@thriftvaultapp.com">contact@thriftvaultapp.com</a>.
+    </p>
+
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-imprint">© 2026 ThriftVault LLC</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/terms/">Terms</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
