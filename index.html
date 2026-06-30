@@ -107,6 +107,27 @@
     }
     .topnav a:hover { color: var(--charcoal); }
     .topnav a:hover::after { transform: scaleX(1); }
+    .topbar-cta {
+      justify-self: end;
+      display: inline-block;
+      padding: 10px 22px;
+      background: var(--teal-deep);
+      color: var(--cream);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+      box-shadow: 0 6px 16px -8px rgba(60, 47, 47, 0.35);
+    }
+    .topbar-cta:hover { background: var(--charcoal); transform: translateY(-1px); }
+    .topbar-cta:active { transform: translateY(1px); }
+    .topbar-cta:focus-visible {
+      outline: 2px solid var(--brass);
+      outline-offset: 4px;
+    }
 
     /* ─── Eyebrow + section header ───────────────── */
     .eyebrow {
@@ -791,6 +812,7 @@
       .wordmark { justify-self: center; }
       .topnav { gap: 22px; }
       .topnav a { font-size: 10px; letter-spacing: 0.18em; }
+      .topbar-cta { justify-self: center; padding: 9px 20px; font-size: 10px; letter-spacing: 0.18em; }
       .screen-card { max-width: 340px; }
       .screen-pair { max-width: 340px; }
       .screen-shot { max-width: 300px; }
@@ -971,13 +993,6 @@
   </style>
 </head>
 <body>
-  <a class="prelaunch-bar" href="https://apps.apple.com/app/id6772308542" aria-label="Download ThriftVault on the App Store">
-    <span class="prelaunch-phrase">
-      <span class="prelaunch-sep" aria-hidden="true">✦</span>
-      <strong>Download on the App Store</strong>
-      <span class="prelaunch-sep" aria-hidden="true">✦</span>
-    </span>
-  </a>
   <header class="topbar">
     <div class="wordmark">Thrift<em>Vault</em></div>
     <nav class="topnav" aria-label="Primary">
@@ -987,6 +1002,7 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="topbar-cta" href="https://apps.apple.com/app/id6772308542" aria-label="Download ThriftVault on the App Store">Download</a>
   </header>
 
   <main class="container">

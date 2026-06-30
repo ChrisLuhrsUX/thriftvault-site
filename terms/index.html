@@ -147,6 +147,27 @@
     }
     .topnav a:hover { color: #3C2F2F; }
     .topnav a:hover::after { transform: scaleX(1); }
+    .topbar-cta {
+      justify-self: end;
+      display: inline-block;
+      padding: 10px 22px;
+      background: #2E6A66;
+      color: #F8F1E9;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+      box-shadow: 0 6px 16px -8px rgba(60, 47, 47, 0.35);
+    }
+    .topbar-cta:hover { background: #3C2F2F; transform: translateY(-1px); }
+    .topbar-cta:active { transform: translateY(1px); }
+    .topbar-cta:focus-visible {
+      outline: 2px solid #B5934F;
+      outline-offset: 4px;
+    }
     @media (max-width: 640px) {
       .topbar {
         grid-template-columns: 1fr;
@@ -157,6 +178,7 @@
       .wordmark-link { justify-self: center; }
       .topnav { gap: 18px; flex-wrap: wrap; justify-content: center; }
       .topnav a { font-size: 10px; letter-spacing: 0.18em; }
+      .topbar-cta { justify-self: center; padding: 9px 20px; font-size: 10px; letter-spacing: 0.18em; }
     }
   </style>
 </head>
@@ -172,6 +194,7 @@
       <a href="/#about">About</a>
       <a href="/#contact">Contact</a>
     </nav>
+    <a class="topbar-cta" href="https://apps.apple.com/app/id6772308542" aria-label="Download ThriftVault on the App Store">Download</a>
   </header>
   <div class="wrap">
     <h1>Terms of Use</h1>
