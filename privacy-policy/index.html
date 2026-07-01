@@ -166,17 +166,26 @@
       outline: 2px solid #B5934F;
       outline-offset: 4px;
     }
+    @media (max-width: 920px) {
+      .topbar { padding: 20px 24px; gap: 16px; }
+      .topnav { gap: 24px; }
+    }
+
     @media (max-width: 640px) {
       .topbar {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 14px;
-        padding: 20px 24px;
       }
       .wordmark-link { justify-self: center; }
-      .topnav { gap: 18px; flex-wrap: wrap; justify-content: center; }
+      .topnav { gap: 22px; }
       .topnav a { font-size: 10px; letter-spacing: 0.18em; }
       .topbar-cta { justify-self: center; padding: 9px 20px; font-size: 10px; letter-spacing: 0.18em; }
+    }
+
+    @media (max-width: 480px) {
+      .topbar { padding: 16px 20px; }
+      .topnav { gap: 18px; }
     }
   </style>
 </head>
