@@ -312,10 +312,6 @@
     .screen-card {
       position: relative;
       text-align: center;
-      transition: transform 280ms cubic-bezier(0.2, 0.8, 0.3, 1.0);
-    }
-    .screen-card:hover {
-      transform: translateY(-4px);
     }
     .screen-card::before {
       content: '';
@@ -673,11 +669,6 @@
       transition: opacity 640ms cubic-bezier(0.2, 0.8, 0.3, 1.0),
                   transform 640ms cubic-bezier(0.2, 0.8, 0.3, 1.0);
     }
-    .reveal-child > .screen-card {
-      opacity: 0;
-      transition: transform 280ms cubic-bezier(0.2, 0.8, 0.3, 1.0),
-                  opacity 640ms cubic-bezier(0.2, 0.8, 0.3, 1.0);
-    }
     .reveal-child.in-view > *:nth-child(1) { transition-delay: 0ms; }
     .reveal-child.in-view > *:nth-child(2) { transition-delay: 90ms; }
     .reveal-child.in-view > *:nth-child(3) { transition-delay: 180ms; }
@@ -688,13 +679,9 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .reveal-child.in-view > .screen-card {
-      opacity: 1;
-    }
-
     @media (prefers-reduced-motion: reduce) {
       .rise { animation: none; }
-      .reveal, .reveal-child > *:not(.screen-card), .reveal-child > .screen-card {
+      .reveal, .reveal-child > *:not(.screen-card) {
         opacity: 1;
         transform: none;
         transition: none;
@@ -731,7 +718,6 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .screen-card:hover { transform: translateY(-4px); }
       .screen-shot { max-width: 360px; }
       .screen-pair {
         grid-column: span 1;
@@ -988,7 +974,7 @@
               height="60"
             />
           </a>
-          <p class="hero-availability rise delay-3">Free for 30 days. iPhone, iOS 15.1 or later.<br />Available in the US, Canada, UK, Europe, Australia, and New Zealand.</p>
+          <p class="hero-availability rise delay-3">10 free scans. No account, no card. iPhone, iOS 15.1 or later.<br />Available in the US, Canada, UK, Europe, Australia, and New Zealand.</p>
         </div>
       </div>
     </section>
@@ -1006,9 +992,9 @@
       </div>
       <div class="features reveal-child">
         <article class="feature">
-          <h3 class="feature-title">Unlimited scans, pricing &amp; vault</h3>
+          <h3 class="feature-title">Scans, pricing &amp; vault</h3>
           <div class="feature-divider" aria-hidden="true"></div>
-          <p class="feature-body">Scan anything off the rack. In seconds, you'll see what it's worth, what you'd make, and how sure we are. No scan limits, no item limits.</p>
+          <p class="feature-body">Scan anything off the rack. In seconds, you'll see what it's worth, what you'd make, and how sure we are. Start with 10 free scans, then 30 days of full scanning. Subscribe to keep scanning; your vault stays on your phone.</p>
         </article>
         <article class="feature">
           <h3 class="feature-title">Compare prices across marketplaces</h3>
@@ -1159,8 +1145,8 @@
     <section id="plans">
       <div class="section-header reveal">
         <span class="eyebrow">Plans</span>
-        <h2>30 days <em>free</em>.</h2>
-        <p>Try scanning free for 30 days, everything unlocked. After that, your vault, hauls, and manual tracking stay free. Subscribe only when you want to keep scanning.</p>
+        <h2>10 scans <em>free</em>.</h2>
+        <p>Start with 10 free scans, no account, no card. Then 30 days of full scanning, everything unlocked. After that, your vault, hauls, and manual tracking stay free. Subscribe only when you want to keep scanning.</p>
       </div>
       <div class="pricing-rack reveal">
         <div class="pricing-rail" aria-hidden="true"></div>
@@ -1191,7 +1177,7 @@
         </div>
       </div>
       <div class="trial-strip">
-        <strong>30 days free to scan.</strong>
+        <strong>10 free scans, then 30 days of full scanning.</strong>
         <span>Vault and inventory stay free. No plan required unless you're scanning.</span>
       </div>
     </section>
