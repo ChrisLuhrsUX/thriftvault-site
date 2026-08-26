@@ -311,26 +311,16 @@
     }
     .screen-card {
       position: relative;
-      background: var(--cream);
-      border: 1px solid var(--brass-soft);
-      border-radius: 4px 4px 14px 14px;
-      padding: 32px 22px 26px;
       text-align: center;
-      box-shadow: 0 6px 18px -10px rgba(60, 47, 47, 0.22);
-      transition: transform 280ms cubic-bezier(0.2, 0.8, 0.3, 1.0), box-shadow 280ms;
+      transition: transform 280ms cubic-bezier(0.2, 0.8, 0.3, 1.0);
     }
-    .screen-card:nth-child(1) { transform: rotate(-0.5deg); }
-    .screen-card:nth-child(2) { transform: rotate(0.3deg); }
-    .screen-card:nth-child(3) { transform: rotate(-0.4deg); }
-    .screen-card:nth-child(4) { transform: rotate(0.4deg); }
     .screen-card:hover {
-      transform: rotate(0deg) translateY(-4px);
-      box-shadow: 0 22px 48px -22px rgba(60, 47, 47, 0.36);
+      transform: translateY(-4px);
     }
     .screen-card::before {
       content: '';
       position: absolute;
-      top: -8px;
+      top: 10px;
       left: 50%;
       width: 14px;
       height: 14px;
@@ -339,17 +329,7 @@
       border-radius: 50%;
       transform: translateX(-50%);
       box-shadow: inset 0 1px 2px rgba(60, 47, 47, 0.25);
-    }
-    .screen-card::after {
-      content: '';
-      position: absolute;
-      top: -28px;
-      left: 50%;
-      width: 1px;
-      height: 22px;
-      background: var(--charcoal-soft);
-      opacity: 0.5;
-      transform: translateX(-50%);
+      z-index: 1;
     }
     .screen-shot {
       display: block;
@@ -390,11 +370,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-    }
-    .screen-pair > .screen-card:first-child { transform: rotate(0.6deg); }
-    .screen-pair > .screen-card:last-child { transform: rotate(-0.6deg); }
-    .screen-pair > .screen-card:hover {
-      transform: rotate(0deg) translateY(-4px);
     }
 
     /* ─── Pricing ────────────────────────────────── */
@@ -708,7 +683,6 @@
     .reveal-child > .screen-card {
       opacity: 0;
       transition: transform 280ms cubic-bezier(0.2, 0.8, 0.3, 1.0),
-                  box-shadow 280ms,
                   opacity 640ms cubic-bezier(0.2, 0.8, 0.3, 1.0);
     }
     .reveal-child.in-view > *:nth-child(1) { transition-delay: 0ms; }
@@ -759,21 +733,12 @@
         gap: 40px;
         padding-top: 32px;
       }
-      .screen-card,
-      .screen-card:nth-child(1),
-      .screen-card:nth-child(2),
-      .screen-card:nth-child(3),
-      .screen-card:nth-child(4),
-      .screen-pair > .screen-card:first-child,
-      .screen-pair > .screen-card:last-child { transform: none; }
       .screen-card {
         max-width: 380px;
         margin-left: auto;
         margin-right: auto;
-        padding: 28px 20px 22px;
       }
-      .screen-card:hover,
-      .screen-pair > .screen-card:hover { transform: translateY(-4px); }
+      .screen-card:hover { transform: translateY(-4px); }
       .screen-shot { max-width: 360px; margin-bottom: 18px; }
       .screen-pair {
         grid-column: span 1;
@@ -1271,7 +1236,7 @@
       <div class="section-header">
         <span class="eyebrow">Contact</span>
       </div>
-      <a class="contact-link" href="mailto:contact@thriftvaultapp.com">contact@thriftvaultapp.com</a>
+      <a class="contact-link" href="mailto:ThriftVaultApp@gmail.com">ThriftVaultApp@gmail.com</a>
     </section>
 
   </main>
