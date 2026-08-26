@@ -335,17 +335,10 @@
       display: block;
       width: 100%;
       height: auto;
-      margin: 0 auto 20px;
+      margin: 0 auto 16px;
       border: 1px solid var(--brass-soft);
       border-radius: 12px;
       box-shadow: 0 6px 18px -10px rgba(60, 47, 47, 0.22);
-    }
-    .screen-divider {
-      width: 48px;
-      height: 1px;
-      background: var(--brass);
-      opacity: 0.5;
-      margin: 0 auto 16px;
     }
     .screen-caption h3 {
       font-family: 'Playfair Display', Georgia, serif;
@@ -369,7 +362,7 @@
       grid-column: span 2;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 28px;
     }
 
     /* ─── Pricing ────────────────────────────────── */
@@ -739,11 +732,11 @@
         margin-right: auto;
       }
       .screen-card:hover { transform: translateY(-4px); }
-      .screen-shot { max-width: 360px; margin-bottom: 18px; }
+      .screen-shot { max-width: 360px; }
       .screen-pair {
         grid-column: span 1;
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 40px;
         max-width: 380px;
         margin-left: auto;
         margin-right: auto;
@@ -796,6 +789,7 @@
       .screen-pair { max-width: 300px; }
       .screen-shot { max-width: 260px; }
       .screens-grid { gap: 36px; }
+      .screen-pair { gap: 36px; }
     }
 
     /* ─── Pre-launch announcement bar ────────────── */
@@ -1071,7 +1065,6 @@
             loading="lazy"
             decoding="async"
           />
-          <div class="screen-divider" aria-hidden="true"></div>
           <div class="screen-caption">
             <h3>Scan a tag. See the <em>flip</em>.</h3>
             <p>Resale read in seconds, with a confidence call.</p>
@@ -1087,7 +1080,6 @@
             loading="lazy"
             decoding="async"
           />
-          <div class="screen-divider" aria-hidden="true"></div>
           <div class="screen-caption">
             <h3>Every find, <em>tracked</em>.</h3>
             <p>Your whole rack, on your phone.</p>
@@ -1103,7 +1095,6 @@
             loading="lazy"
             decoding="async"
           />
-          <div class="screen-divider" aria-hidden="true"></div>
           <div class="screen-caption">
             <h3>Today's finds, one <em>haul</em>.</h3>
             <p>Each thrift run, grouped on its own.</p>
@@ -1119,7 +1110,6 @@
             loading="lazy"
             decoding="async"
           />
-          <div class="screen-divider" aria-hidden="true"></div>
           <div class="screen-caption">
             <h3>Numbers that make it <em>worth it</em>.</h3>
             <p>Total profit, best flip, and profit by store, at a glance.</p>
@@ -1136,7 +1126,6 @@
               loading="lazy"
               decoding="async"
             />
-            <div class="screen-divider" aria-hidden="true"></div>
             <div class="screen-caption">
               <h3>Catch the <em>red flags</em>.</h3>
               <p>A clear no when something's off.</p>
@@ -1152,7 +1141,6 @@
               loading="lazy"
               decoding="async"
             />
-            <div class="screen-divider" aria-hidden="true"></div>
             <div class="screen-caption">
               <h3>Worth a <em>closer look</em>.</h3>
               <p>A heads-up on what to verify in person.</p>
