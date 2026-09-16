@@ -205,7 +205,7 @@
   </header>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="meta">ThriftVault LLC &middot; Last updated: July 2026</p>
+    <p class="meta">ThriftVault LLC &middot; Last updated: September 2026</p>
 
     <p>
       ThriftVault is a personal flip tracker for thrift resellers, operated by ThriftVault LLC.
@@ -213,9 +213,11 @@
     </p>
 
     <h2>1. Data We Collect</h2>
-    <p>ThriftVault does not collect, transmit, or store any personal data on external servers.</p>
+    <p>ThriftVault does not operate a backend or user accounts, and does not store your vault on our servers.</p>
     <p>All data you enter, item names, prices, photos, notes, and settings, is stored
-    <strong>only on your device</strong> using local storage (AsyncStorage). Nothing leaves your device.</p>
+    <strong>only on your device</strong> using local storage (AsyncStorage). Your vault stays
+    on your device. The only data that leaves the device is the limited data described in
+    Sections 3 and 4, sent when you scan, subscribe, submit feedback, or when the app reports a crash.</p>
 
     <h2>2. Photos and Camera</h2>
     <p>
@@ -244,14 +246,22 @@
       ThriftVault uses Google's Gemini API as the primary AI scan provider and Anthropic's Claude
       API as a fallback when Gemini is unavailable or overloaded. When you scan an item, the photo
       is sent to whichever provider is currently serving the request, Google's servers in most
-      cases and Anthropic's servers when the fallback is triggered. Each provider may retain and
-      process the photo in accordance with their respective API terms, which may include using it
-      to improve their services. ThriftVault does not store your photos on any external server.
-      No other data (vault items, prices, notes, personal info) is ever transmitted to either
-      provider. See
+      cases and Anthropic's servers when the fallback is triggered. Gemini may also search the
+      public web for comparable listings, using queries derived from what it identified in the
+      photo. Each provider may retain and process the photo (and any search derived from it) in
+      accordance with their respective API terms, which may include using it to improve their
+      services. ThriftVault does not store your photos on any external server. Your vault (saved
+      items, prices, notes, and personal info you typed) is not uploaded to either provider. See
       <a href="https://ai.google.dev/gemini-api/terms">Google's Gemini API Terms</a> and
       <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy Policy</a>
       for details on how each provider handles data sent to their API.
+    </p>
+    <p>
+      After a scan, the app may request the public listing URLs Gemini cited, from your device,
+      to confirm each one resolves to a real marketplace item page. Those requests go to the
+      marketplace that hosts the listing (for example eBay, Poshmark, or Depop). The marketplace
+      may see your IP address and a normal page request. No photo, vault item, or account data
+      is sent with those requests. A resolved URL is not proof that the listing sold.
     </p>
     <p>
       ThriftVault uses RevenueCat to manage subscriptions and in-app purchases. When you
@@ -270,8 +280,9 @@
     </p>
     <p>
       There is no backend and no account system. Network requests made by the app are limited to:
-      the Gemini and Claude APIs (AI scans), RevenueCat (subscription management), Tally
-      (Send Feedback form submissions), and Sentry (crash reports).
+      the Gemini and Claude APIs (AI scans), public listing URLs cited by a scan (to confirm they
+      resolve to a real item page), RevenueCat (subscription management), Tally (Send Feedback
+      form submissions), Sentry (crash reports), and Expo (to deliver app updates).
     </p>
 
     <h2>5. Data Retention</h2>
@@ -291,7 +302,12 @@
     </p>
     <ul>
       <li><strong>AI scan (Google Gemini, Anthropic Claude).</strong> Performance of a
-      contract (Art 6(1)(b)): a photo is sent only because you asked us to analyze it.</li>
+      contract (Art 6(1)(b)): a photo is sent only because you asked us to analyze it.
+      Gemini may search the public web as part of that analysis.</li>
+      <li><strong>Listing URL checks.</strong> Performance of a contract (Art 6(1)(b)):
+      when a scan cites a public listing, the app requests that URL from your device to
+      confirm it is a real item page. The marketplace may see your IP address. No photo
+      or vault data is sent.</li>
       <li><strong>Subscriptions (Apple, RevenueCat).</strong> Performance of a contract
       (Art 6(1)(b)): processing purchase and entitlement data is necessary to provide the
       subscription you bought.</li>
@@ -311,7 +327,9 @@
       you submit) is transferred outside the EEA and UK. Where required, these providers rely
       on the European Commission's Standard Contractual Clauses (and the UK Addendum) as the
       safeguard for such transfers. See each provider's linked privacy policy for the specific
-      transfer mechanism they use.
+      transfer mechanism they use. Listing URL checks contact the marketplace that hosts the
+      page, which may be inside or outside the EEA or UK. Those sites are not our processors
+      and handle the request under their own terms.
     </p>
 
     <h2>8. Your Rights in the EEA and UK</h2>
