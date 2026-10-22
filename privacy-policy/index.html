@@ -205,7 +205,7 @@
   </header>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="meta">ThriftVault LLC &middot; Last updated: September 2026</p>
+    <p class="meta">ThriftVault LLC &middot; Last updated: October 2026</p>
 
     <p>
       ThriftVault is a personal flip tracker for thrift resellers, operated by ThriftVault LLC.
@@ -223,9 +223,10 @@
     <p>
       ThriftVault may request access to your camera and photo library so you can attach photos to
       the items in your vault. Photos you add are saved locally on your device. The only exception
-      is the AI scan feature, which sends a photo to one of our third-party AI providers (Google
-      Gemini or, as a fallback, Anthropic Claude) for analysis (see Section 4). Photos are never
-      stored on external servers or shared for any other purpose.
+      is the AI scan feature, which sends a photo through our scan service (hosted on Cloudflare)
+      to one of our third-party AI providers (Google Gemini or, as a fallback, Anthropic Claude)
+      for analysis (see Section 4). Photos are never stored on external servers or shared for any
+      other purpose.
     </p>
 
     <h2>3. Crash Reporting</h2>
@@ -257,6 +258,15 @@
       for details on how each provider handles data sent to their API.
     </p>
     <p>
+      Scan requests pass through a small scan service we run on Cloudflare Workers, which keeps
+      the AI providers' API keys off your device. It forwards the photo and prompt to the AI
+      provider and does not store them. To enforce fair-use limits it receives your anonymous
+      RevenueCat app user ID, checks your subscription status with RevenueCat, and keeps a count
+      of each ID's scan requests for the current day. Cloudflare may also log your IP address and
+      basic request details for security and abuse prevention. See
+      <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a> for details.
+    </p>
+    <p>
       After a scan, the app may request the public listing URLs Gemini cited, from your device,
       to confirm each one resolves to a real marketplace item page. Those requests go to the
       marketplace that hosts the listing (for example eBay, Poshmark, or Depop). The marketplace
@@ -279,8 +289,9 @@
       See <a href="https://tally.so/help/privacy-policy">Tally's Privacy Policy</a> for details.
     </p>
     <p>
-      There is no backend and no account system. Network requests made by the app are limited to:
-      the Gemini and Claude APIs (AI scans), public listing URLs cited by a scan (to confirm they
+      There is no account system, and the only server we run is the scan service above. Network
+      requests made by the app are limited to: our scan service on Cloudflare (which relays AI
+      scans to Gemini and Claude), public listing URLs cited by a scan (to confirm they
       resolve to a real item page), RevenueCat (subscription management), Tally (Send Feedback
       form submissions), Sentry (crash reports), and Expo (to deliver app updates).
     </p>
@@ -321,7 +332,7 @@
     <h2>7. International Data Transfers</h2>
     <p>
       ThriftVault is operated from the United States, and the third-party services above
-      (Google, Anthropic, Apple, RevenueCat, Sentry, and Tally) process data on servers in
+      (Cloudflare, Google, Anthropic, Apple, RevenueCat, Sentry, and Tally) process data on servers in
       the United States. If you use the app from the EEA or the UK, data sent to these
       services (such as a scan photo, a crash report, subscription identifiers, or feedback
       you submit) is transferred outside the EEA and UK. Where required, these providers rely
