@@ -305,11 +305,12 @@
     /* ─── Screens ────────────────────────────────── */
     .screens-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 28px;
       padding-top: 36px;
     }
     .screen-card {
+      grid-column: span 2;
       position: relative;
       text-align: center;
     }
@@ -354,12 +355,7 @@
       color: var(--charcoal-soft);
       margin: 0;
     }
-    .screen-pair {
-      grid-column: span 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
+    .screen-card:nth-child(4) { grid-column: 2 / span 2; }
 
     /* ─── Pricing ────────────────────────────────── */
     .pricing-rack {
@@ -713,20 +709,14 @@
         gap: 40px;
         padding-top: 32px;
       }
-      .screen-card {
+      .screen-card,
+      .screen-card:nth-child(4) {
+        grid-column: auto;
         max-width: 380px;
         margin-left: auto;
         margin-right: auto;
       }
       .screen-shot { max-width: 360px; }
-      .screen-pair {
-        grid-column: span 1;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        max-width: 380px;
-        margin-left: auto;
-        margin-right: auto;
-      }
       .pricing-rack { margin-top: 8px; }
       .pricing-rail { display: none; }
       .pricing-grid {
@@ -756,7 +746,6 @@
       .topnav a { font-size: 10px; letter-spacing: 0.18em; }
       .topbar-cta { justify-self: center; padding: 9px 20px; font-size: 10px; letter-spacing: 0.18em; }
       .screen-card { max-width: 340px; }
-      .screen-pair { max-width: 340px; }
       .screen-shot { max-width: 300px; }
       .screen-caption h3 { font-size: 18px; }
     }
@@ -772,10 +761,8 @@
       .price-amount { font-size: 40px; }
       .topnav { gap: 18px; }
       .screen-card { max-width: 300px; }
-      .screen-pair { max-width: 300px; }
       .screen-shot { max-width: 260px; }
       .screens-grid { gap: 36px; }
-      .screen-pair { gap: 36px; }
     }
 
     /* ─── Pre-launch announcement bar ────────────── */
@@ -1101,36 +1088,21 @@
             <p>Total profit, best flip, and profit by store, at a glance.</p>
           </div>
         </article>
-        <div class="screen-pair">
-          <article class="screen-card">
-            <img
-              class="screen-shot"
-              src="assets/screenshots/05-red-flags-counterfeit.jpg"
-              alt="ThriftVault scan with a red counterfeit warning banner asking the user to confirm whether the item looks fake"
-              width="1200"
-              height="2597"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="screen-caption">
-              <h3>Catch the <em>red flags</em>.</h3>
-              <p>A clear no when something's off.</p>
-            </div>
-          </article>
-          <article class="screen-card">
-            <img
-              class="screen-shot"
-              src="assets/screenshots/06-red-flags-verify.jpg"
-              alt="ThriftVault scan with a teal verification banner suggesting the user inspect the item in person before paying"
-              width="1200"
-              height="2597"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="screen-caption">
-              <h3>Worth a <em>closer look</em>.</h3>
-              <p>A heads-up on what to verify in person.</p>
-            </div>
+        <article class="screen-card">
+          <img
+            class="screen-shot"
+            src="assets/screenshots/05-red-flags-counterfeit.jpg"
+            alt="ThriftVault scan with a red counterfeit warning banner asking the user to confirm whether the item looks fake"
+            width="1200"
+            height="2597"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="screen-caption">
+            <h3>Catch the <em>red flags</em>.</h3>
+            <p>A clear no when something's off.</p>
+          </div>
+        </article>
           </article>
         </div>
       </div>
